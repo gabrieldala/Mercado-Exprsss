@@ -1,0 +1,134 @@
+<%- include ('partials/header.ejs') %>
+<title>Message | Casino Virtual | Chat | Unipersoft </title>
+<body>
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="text-center">
+                <span style="font-size: 160%; color: #fff;">&leftarrow;</span><a href="/"><button type="button" class="logout btn btn-lg btn-outline-primary btn-block" id="logout">Voltar</button></a>
+            </div>
+            <div id="username">
+    
+            </div>
+            <hr />
+
+            <header>
+                    <input class="form_control;" type="text" placeholder="Digite sua mensagem" id="message_input" autofocus>
+                    <button class="button" name="enviar" type="submit">Clique Enter ou _|</button>
+            </header>
+
+            <div id="chat_content">
+                <div class="messages" id="messages">
+                    <!--<div class="new_message">
+                        <label class="form_labe">
+                            <strong> username </strong> <span> texto - 10/10 10-20</span>
+                        </label>
+                    </div>-->
+
+                </div>
+            </div>
+
+            <footer>
+
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="websocket.js"></script>
+</body>
+
+<style>
+    body{
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+
+    a:hover{
+        text-decoration: none;
+    }
+
+     /* 
+CSS Adatado de https://github.com/Roger-Melo/lyrics-search/blob/master/style.css 
+@author Roger Melo 
+*/
+
+
+
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  position: relative;
+}
+
+header * {
+  z-index: 1;
+}
+ input {
+  border: 0;
+  border-radius: 50px;
+  font-size: 16px;
+  padding: 15px 100px;
+  width: 100%;
+}
+ .button {
+  position: absolute;
+  top: 70.60%;
+  right: 1px;
+  background-color: #10e052;
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 16px;
+  padding: 13px 30px;
+}
+
+
+
+form {
+    margin: 10px;
+    padding: 5px;
+
+    margin-top: 140px;
+}
+
+
+select,
+input {
+    outline:none;
+}
+
+.row {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.new_message {
+    padding: 5px;
+}
+
+#message_input {
+    margin: 50px;
+}
+</style>
+<%- include ('partials/footer.ejs') %>

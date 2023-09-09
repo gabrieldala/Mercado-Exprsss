@@ -1,0 +1,145 @@
+<%- include ('partials/header.ejs') %>
+
+<body>
+
+    <form action="/chat">
+        <div class="container">
+            <br>
+            <div id="card" class="card">
+                <div class="card-header cd">
+                    <p class="text-center txt"> INSIRA SEUS DADOS PARA ACESSARES SUA SALA DE CONVERSAS</p>
+                </div>
+                <div class="card-body">
+            <div class="row">
+                <label for="form_label" class="ff">DIGITE SEU E-MAIL PARA ENTRARES EM SUA SALA PARTICULAR, OU QUALQUER OUTRO E-MAIL PARA CRIARES UMA SALA NOVA, PARTICULAR OU COLECTIVA</label>
+                <input name="select_room" id="select_room" type="email" class="form-control" placeholder="E-mail" required>
+            </div>
+            <hr>
+            <div class="row">
+                    <label for="form_label" class="ff">DIGITE SEU NOME</label>
+                    <input class="form-control" type="text" name="username" placeholder="Nome" required>
+            </div>
+            <br>
+            <div class="row">
+                <button type="submit" class="btn btn-lg btn-primary btn-block">Entrar</button>
+        </div>
+        </div>
+    </div>
+</div>
+    </form>
+    <br>
+    <h4 class="row justify-content-center" style="color: #fff;">Casino Virtual</h4>
+    <br>
+        <p>
+            <a class="row justify-content-center" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="color: #fff;">
+              Clique aqui para veres um <span style="color: red;"> AVISO!</span>
+            </a>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body text-center" style="color: black;">
+              Uma única letra errada no seu e-mail, entrarás em uma sala errada e não conseguirás visualizar nenhuma de suas mensagens.
+            </div>
+          </div>
+</body>
+<br>
+
+<!--Footer Barra Final-->
+<footer class="bd-footer py-4 py-md-5 mt-5" style="background-color: #2d2d2d;">
+    <div class="container py-4 py-md-5 px-4 px-md-3">
+      <div class="container">
+       <div class="arial">
+     <div class="row" style="color: white;">
+
+ 
+       <div class="col-6 col-lg-2 mb-3">
+         <ul class="list-unstyled">
+           <li>SOBRE</li>
+           <li><a href="#">Quem somos</a></li>
+           <li><a href="#">Empresa</a></li>
+           <li><a href="#">Message Virtual</a></li>
+       </ul> 
+       </div>
+ 
+       <div class="col-6 col-lg-3 mb-3">
+         <ul class="list-unstyled">
+           <li>INFORMAÇÕES</li>
+           <li><a href="#">Termos e Condições</a></li>
+           <li><a href="/privaceplitic">Política de Privacidade</a></li>
+       </ul>
+       </div>
+       <div class="col-6 col-lg-4 mb-3">
+         <ul class="list-unstyled">
+             <li>CENTRO DE AJUDA</li>
+             <li><a href="/helpcentermessage">Centro de ajuda</a></li>
+         </ul>
+       </div>
+      </div>
+    </div>
+   </div>
+   </div>
+
+   <div class="text-center">
+    <a href="http://localhost:8000/" target="_blank"><img style="width: 20%" class="img" src="/img/Unipersoft white.png" alt="Unipersoft.png" /></a>
+    </div>
+    <br>
+   <!--Copyright-->
+   <div class="copyright">
+     <div class="container">
+       <div class="row">
+         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="row justify-content-center" style="color: #fff; font-size: 12px;">© Copyright 2023 - Message Virtual</div>
+         </div>
+       </div>
+     </div>
+ 
+   </div>
+    <!--/Copyright-->
+  </footer>
+  <!--/Footer Barra Final-->
+
+<style>
+
+
+    li{
+        font-family: Arial;
+        color: #19af30;
+    }
+
+    li a{
+        text-decoration: none;
+        color: #878787;
+    }
+
+    li a:hover{
+        text-decoration: none;
+        color: #4368ff;
+    }
+
+    body{
+        background-color: black;
+        color: #ffffff;
+    }
+    #card{
+        margin-top: 20%;
+    }
+
+    label{
+        color: black;
+    }
+
+    .txt{
+      font-family: Poppins SemiBold;
+      color: rgb(0, 0, 0);
+      font-size: 27px;
+    }
+
+    .cd{
+      background-color: #bbd2f6;
+    }
+
+    .ff{
+      font-size: 15px;
+    }
+</style>
+
+<%- include ('partials/footer.ejs') %>

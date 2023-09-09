@@ -1,0 +1,67 @@
+<%- include ('../partials/header.ejs') %>
+
+<style>
+   .hidden{
+      display: none;
+   }
+
+   .span{
+      font-size: 20px;
+      font-family: Open Sans Regular;
+   }
+
+   h5{
+    font-size: 23px;
+    font-family: Open Sans Extrabold;
+   }
+
+   h2{
+    font-family: Open Sans Extrabold;
+   }
+
+   .card{
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+  }
+
+</style>
+<body>
+    <br>
+    <br>
+    <br>
+   <div class="container">
+      <br>
+      <h1 class="text-center">PÁGINA DE TODAS AS PERGUNTAS DOS USUÁRIOS DO MESSAGE VIRTUAL</h1>
+        <br>
+    <div class="m-3 m-auto">
+       <label for="exampleFormControlInput1" class="form-label"><h4>Organizado por ordem de chegada</h4></label>
+     </div>
+    <br>
+    <% datas.forEach(data =>{ %>
+     <div class="card">
+
+         <div class="card-header" style="background-color: aqua;">
+      
+          <h2 class="row justify-content-center">MESSAGE VIRTUAL</h2>
+          </div>
+
+          <div class="card-body">
+          <h5>E-MAIL OU CONTACTO: <span class="span"><%= data.email %></span></h5>
+          <hr>
+          <h5>PERGUNTA: <span class="span"><%= data.question %></span></h5>
+          <hr>
+          <h5>DATA: <span class="span"><%= data.date %></span></h5>
+          <form action="/questionD" method="POST">
+              <input type="hidden" name="id" value="<%=data._id %>">
+              <div class="d-grid gap-2 m-3"><button type="submit" class="btn btn-danger">Eliminar</button></div>
+           </form>
+         </div>
+      </div>
+      <br>
+      <% }) %> 
+    </div>
+
+
+</body>
+
+
+<%- include ('../partials/footer.ejs') %>
